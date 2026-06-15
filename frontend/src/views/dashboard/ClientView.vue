@@ -5,7 +5,7 @@ import { ROUTES } from '@/constants/routes';
 const router = useRouter();
 
 function handleBrowseArrivals() {
-  router.push(ROUTES.STORE.PRODUCTS);
+  router.push(ROUTES.STORE.PRODUCTS.PATH);
 }
 </script>
 

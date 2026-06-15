@@ -78,7 +78,7 @@ async function handleRegister() {
   try {
     await authService.register(validationPayload);
     toast.success('Registration successful! Welcome to ShredGear.');
-    await router.push(ROUTES.AUTH.LOGIN);
+    await router.push(ROUTES.AUTH.LOGIN.PATH);
   } catch (err) {
     const backendData = err.response?.data;
     formError.value = (typeof backendData === 'object' ? backendData.message : backendData)
@@ -193,7 +193,7 @@ async function handleRegister() {
 
         <p class="registerText">
           Already have an account?
-          <RouterLink :to="ROUTES.AUTH.LOGIN" class="registerLink">Log in</RouterLink>
+          <RouterLink :to="ROUTES.AUTH.LOGIN.PATH" class="registerLink">Log in</RouterLink>
         </p>
       </div>
     </div>
@@ -201,7 +201,6 @@ async function handleRegister() {
 </template>
 
 <style scoped>
-/* Reuse the exact styles from Login.vue */
 .mainWrapper {
   display: flex;
   justify-content: center;

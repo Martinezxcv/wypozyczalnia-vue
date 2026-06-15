@@ -1,15 +1,15 @@
 
 export const ROUTES = {
   AUTH: {
-    LOGIN: '/login',
-    REGISTER: '/register',
-    FORGOT_PASSWORD: '/forgot-password',
+    LOGIN: { PATH: '/login', NAME: 'Login' },
+    REGISTER: { PATH: '/register', NAME: 'Register' },
+    FORGOT_PASSWORD: { PATH: '/forgot-password', NAME: 'ResetPassword' },
   },
   STORE: {
-    DASHBOARD: '/main',
-    PRODUCTS: '/products',
-    PRODUCT_DETAILS: '/products/:name',
-    CART: '/cart',
+    DASHBOARD: { PATH: '/main', NAME: 'Dashboard' },
+    PRODUCTS: { PATH: '/products', NAME: 'Products' },
+    PRODUCT_DETAILS: { PATH: '/products/:name', NAME: 'ProductDetails' },
+    CART: { PATH: '/cart', NAME: 'Cart' },
   },
   ACCOUNT: {
     PROFILE: '/profile',

@@ -14,7 +14,7 @@ const cartCount = ref(0);
 
 function handleLogout() {
   authStore.logout();
-  router.push(ROUTES.AUTH.LOGIN);
+  router.push(ROUTES.AUTH.LOGIN.PATH);
 }
 
 async function updateCartCount() {
@@ -40,14 +40,14 @@ onUnmounted(() => {
   <div class="dashboardContainer">
     <nav class="navbar">
       <div class="navLeft">
-        <RouterLink :to="ROUTES.STORE.DASHBOARD">
+        <RouterLink :to="ROUTES.STORE.DASHBOARD.PATH">
           <img :src="logoImg" alt="ShredGear" class="navLogo"/>
         </RouterLink>
       </div>
 
       <div class="navRight">
         <div class="navLinks">
-          <RouterLink :to="ROUTES.STORE.PRODUCTS" class="navItem">
+          <RouterLink :to="ROUTES.STORE.PRODUCTS.PATH" class="navItem">
             Products
           </RouterLink>
 
@@ -63,7 +63,7 @@ onUnmounted(() => {
             Orders
           </RouterLink>
 
-          <RouterLink :to="ROUTES.STORE.CART" class="cartWrapper">
+          <RouterLink :to="ROUTES.STORE.CART.PATH" class="cartWrapper">
             Cart
             <span v-if="cartCount > 0" class="cartCountBadge">
                             {{ cartCount }}

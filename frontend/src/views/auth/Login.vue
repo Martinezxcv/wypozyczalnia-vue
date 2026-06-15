@@ -18,7 +18,7 @@ const authStore = useAuthStore();
 
 watchEffect(() => {
   if (authStore.isAuthenticated) {
-    router.replace(ROUTES.STORE.DASHBOARD);
+    router.replace(ROUTES.STORE.DASHBOARD.PATH);
   }
 });
 
@@ -93,7 +93,7 @@ async function handleLogin() {
           <a href="#forgot" class="forgotLink">Forgot password?</a>
           <span class="registerText">
                         Don't have an account?
-                        <RouterLink :to="ROUTES.AUTH.REGISTER" class="registerLink">
+                        <RouterLink :to="ROUTES.AUTH.REGISTER.PATH" class="registerLink">
                             Register here
                         </RouterLink>
                     </span>
