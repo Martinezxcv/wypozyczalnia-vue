@@ -9,6 +9,10 @@ import MainDashboard from "@/views/dashboard/MainDashboard.vue";
 import ProductDetails from "@/views/products/ProductDetails.vue";
 import Product from "@/views/products/Product.vue";
 import Cart from "@/views/cart/Cart.vue";
+import Account from "@/views/account/Account.vue";
+import Orders from "@/views/Orders.vue";
+import ProductForm from "@/views/management/ProductForm.vue";
+import ManagementDashboard from "@/views/management/ManagementDashboard.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -54,27 +58,32 @@ const router = createRouter({
           path: ROUTES.STORE.CART.PATH,
           name: ROUTES.STORE.CART.NAME,
           component: Cart
-        },/*
+        },
         {
-          path: ROUTES.ACCOUNT.ORDERS,
-          name: 'Orders',
+          path: ROUTES.ACCOUNT.ORDERS.PATH,
+          name: ROUTES.ACCOUNT.ORDERS.NAME,
           component: Orders
         },
         {
-          path: ROUTES.ACCOUNT.PROFILE,
-          name: 'Profile',
+          path: ROUTES.ACCOUNT.PROFILE.PATH,
+          name: ROUTES.ACCOUNT.PROFILE.NAME,
           component: Account
         },
         {
-          path: ROUTES.MANAGEMENT.PRODUCT_FORM_PATTERN,
-          name: 'ProductForm',
+          path: ROUTES.MANAGEMENT.PRODUCT_FORM_PATTERN.PATH,
+          name: ROUTES.MANAGEMENT.PRODUCT_FORM_PATTERN.NAME,
           component: ProductForm
         },
         {
-          path: ROUTES.MANAGEMENT.DASHBOARD,
-          name: 'Management',
-          component: Management
-        }*/
+          path: ROUTES.MANAGEMENT.PRODUCT_FORM.PATH,
+          name: ROUTES.MANAGEMENT.PRODUCT_FORM.NAME,
+          component: ProductForm
+        },
+        {
+          path: ROUTES.MANAGEMENT.DASHBOARD.PATH,
+          name: ROUTES.MANAGEMENT.DASHBOARD.NAME,
+          component: ManagementDashboard
+        }
       ]
     }
   ]

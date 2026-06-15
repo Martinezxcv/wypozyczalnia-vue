@@ -12,14 +12,14 @@ export const ROUTES = {
     CART: { PATH: '/cart', NAME: 'Cart' },
   },
   ACCOUNT: {
-    PROFILE: '/profile',
-    ORDERS: '/orders',
-    SETTINGS: '/account',
+    PROFILE: { PATH: '/profile', NAME: 'profile' },
+    ORDERS: { PATH: '/orders', NAME: 'orders' },
+    SETTINGS: { PATH: '/account', NAME: 'account' }
   },
   MANAGEMENT: {
-    DASHBOARD: '/management',
-    PRODUCT_FORM: '/management/productForm',
-    PRODUCT_FORM_PATTERN: '/management/productForm/:name?',
+    DASHBOARD: { PATH: '/management', NAME: 'Management' },
+    PRODUCT_FORM: { PATH: '/management/productForm', NAME: 'ProductCreate' },
+    PRODUCT_FORM_PATTERN: { PATH: '/management/productForm/:name?', NAME: 'ProductForm' },
   }
 };
 

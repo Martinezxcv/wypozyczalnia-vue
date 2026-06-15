@@ -53,13 +53,13 @@ onUnmounted(() => {
 
           <RouterLink
             v-if="authStore.user?.role === 'Manager' || authStore.user?.role === 'Employee'"
-            :to="ROUTES.MANAGEMENT.DASHBOARD"
+            :to="ROUTES.MANAGEMENT.DASHBOARD.PATH"
             class="navItem"
           >
             Management
           </RouterLink>
 
-          <RouterLink :to="ROUTES.ACCOUNT.ORDERS" class="navItem">
+          <RouterLink :to="ROUTES.ACCOUNT.ORDERS.PATH" class="navItem">
             Orders
           </RouterLink>
 
@@ -89,7 +89,7 @@ onUnmounted(() => {
               </div>
 
               <RouterLink
-                :to="ROUTES.ACCOUNT.PROFILE"
+                :to="ROUTES.ACCOUNT.PROFILE.PATH"
                 class="dropdownItem"
                 @click="isMenuOpen = false"
               >
